@@ -120,7 +120,7 @@ int rgb_to_hsb( int red, int green, int blue, float *hue, float *sat, float *bri
     printf("in rgb to hsb %f %i %f %i %f %i %f %f  \n", r,red ,b ,blue,g ,green, min, max);    
     return 1;
 }
-
+/*
 void main()                                                                               
 {
     image_size img_size;
@@ -144,3 +144,4 @@ void main()
    
     rgb_to_freq(buffer, freq_mapping, img_size);
 } 
+*/

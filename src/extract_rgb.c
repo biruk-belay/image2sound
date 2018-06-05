@@ -60,7 +60,7 @@ int extract_rgb(char *filename, size_t size, unsigned char *buffer)
         fprintf(stderr, "RGB not extracted \n");
         return 0;
     }
- 
+
     return 1;
 }
 
@@ -91,7 +91,7 @@ int read_JPEG_file(char *filename, size_t size, unsigned char *data)
         fprintf(stderr, "read_JPEG_FILE: can't open %s\n", filename);
         return 0;
     }
-
+    
     cinfo.err = jpeg_std_error(&jerr);
     jpeg_create_decompress(&cinfo);
     jpeg_stdio_src(&cinfo, infile);
@@ -120,7 +120,7 @@ int read_JPEG_file(char *filename, size_t size, unsigned char *data)
     /* Assume put_scanline_someplace wants a pointer and sample count. */
 	    copy_to_buffer(img_buffer[0], row_stride, temp_ptr+row_stride*i);
         i++;
-    put_scanline_someplace(img_buffer[0], row_stride, destfile);
+        put_scanline_someplace(img_buffer[0], row_stride, destfile);
     }
  
     (void) jpeg_finish_decompress(&cinfo);/* Step 7: Finish decompression */

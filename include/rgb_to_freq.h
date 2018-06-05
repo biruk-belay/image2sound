@@ -1,5 +1,7 @@
 //#include "extract_rgb.h"
 
+#define PIXEL_COMPONENTS 3
+
 enum FREQ_LEVLS {                                                                         
     FREQ_1, 
     FREQ_2 = 3,
